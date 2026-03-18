@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppins-font { font-family: 'Poppins', sans-serif; }
+
+/* Zone de Projection Active */
+#projection-wall {
+    transition: transform 0.1s ease-out; /* Animation ultra-rapide pour le Keystone */
+    will-change: transform; /* Force l'utilisation du GPU pour la fluidité */
+    transform-style: preserve-3d; /* Rendu 3D précis */
+}
+
+/* Optimisation du rendu vidéo/image */
+#video-feed, #image-feed {
+    transition: filter 0.1s ease-out;
+}
+
+/* Personnalisation des curseurs (Range Sliders) Cyber */
+input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #252525;
+    border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: background 0.2s, transform 0.2s;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+    background: #00e6e6; /* Cyan lors de l'activation */
+    transform: scale(1.1);
+}
